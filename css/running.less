@@ -1,0 +1,1609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(100vw/7.2);
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.war {
+    overflow: hidden;
+    height: 100%;
+
+    .lasttop {
+        // display: none;
+        position: absolute;
+        top: 1rem;
+        font-size: .24rem;
+        color: white;
+        margin-left: 1.15rem;
+
+        p:first-child {
+            font-size: .3rem;
+            float: left;
+
+            span {
+                font-size: .5rem;
+            }
+        }
+
+        .xun {
+            width: 2rem;
+            // height: .6rem;
+            border: .01rem solid white;
+            line-height: .6rem;
+            border-radius: .3rem;
+            float: left;
+            margin-left: .3rem;
+        }
+
+        p:last-child {
+            float: left;
+            margin-top: .3rem;
+        }
+    }
+
+    .lastleft {
+        width: 1.65rem;
+        height: 1.64rem;
+        position: absolute;
+        top: 5rem;
+        left: 0.4rem;
+        transform-origin: -2rem 2rem;
+        animation: xuan 2000ms linear forwards;
+
+        img {
+            width: 1.65rem;
+            height: 1.64rem;
+        }
+
+        div {
+            width: .7rem;
+            height: 1rem;
+            position: absolute;
+            top: -0.6rem;
+            left: 28%;
+
+            img {
+                width: .7rem;
+                height: 1rem;
+            }
+        }
+        p{
+            font-size: .24rem;
+            width: 1.8rem;
+            text-align: center;
+            line-height: .4rem;
+            border: .03rem solid #7ba9d8;
+            background-color: #2f5e8c;
+            border-radius: .15rem;
+            color: white;
+            position: absolute;
+            top: 1rem;
+            left: -.04rem;
+            opacity: .7;
+        }
+    }
+    @keyframes xuan {
+        0%{
+            transform: rotate(-180deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+
+    .lastcenter {
+        width: 2.1rem;
+        height: 2.08rem;
+        position: absolute;
+        top: 3.5rem;
+        left: 2.5rem;
+        animation: xiao 2000ms linear forwards;
+
+        img {
+            width: 2.1rem;
+            height: 2.08rem;
+        }
+
+        div {
+            width: .7rem;
+            height: 1rem;
+            position: absolute;
+            top: -0.5rem;
+            left: 30%;
+
+            img {
+                width: .7rem;
+                height: 1rem;
+            }
+        }
+        p{
+            font-size: .24rem;
+            width: 1.8rem;
+            text-align: center;
+            line-height: .4rem;
+            border: .03rem solid #7ba9d8;
+            background-color: #2f5e8c;
+            border-radius: .15rem;
+            color: white;
+            position: absolute;
+            top: 1.3rem;
+            left: 0.15rem;
+            opacity: .7;
+        }
+    }
+    @keyframes xiao {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+
+    .box{
+        display: none;
+    }
+    .box1,.box2{
+        width: 2rem;
+        line-height: .6rem;
+        text-align: center;
+        border: .01rem solid #ffffff;
+        border-radius: .3rem;
+        font-size: .24rem;
+        color: white;
+    }
+    .box1{
+        position: absolute;
+        bottom: 1rem;
+        left: .8rem;
+    }
+    .box2{
+        position: absolute;
+        bottom: 1rem;
+        right: .8rem;
+    }
+    .lastright {
+        width: 1.82rem;
+        height: 1.82rem;
+        position: absolute;
+        top: 4.3rem;
+        right: 0.3rem;
+        transform-origin: 2rem 2rem;
+        animation: xuan1 2000ms linear forwards;
+
+        img {
+            width: 1.82rem;
+            height: 1.82rem;
+        }
+
+        div {
+            width: .7rem;
+            height: 1rem;
+            position: absolute;
+            top: -0.5rem;
+            left: 30%;
+            img {
+                width: .7rem;
+                height: 1rem;
+            }
+        }
+        p{
+            font-size: .24rem;
+            width: 1.8rem;
+            text-align: center;
+            line-height: .4rem;
+            border: .03rem solid #7ba9d8;
+            background-color: #2f5e8c;
+            border-radius: .15rem;
+            color: white;
+            position: absolute;
+            top: 1.2rem;
+            left: 0.05rem;
+            opacity: .7;
+        }
+    }
+    @keyframes xuan1 {
+        0%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+
+    .xun img {
+        width: .26rem;
+        margin-left: .3rem;
+    }
+
+    .bg {
+        height: 100%;
+        background: url(../images/年度账单/切图/bg.jpg);
+        background-size: cover;
+        background-position: 0 100%;
+        overflow: hidden;
+        position: relative;
+        transition: all 3900ms;
+
+        .er {
+            display: none;
+        }
+
+        .man {
+            animation: man1 3000ms linear forwards;
+        }
+
+        .shang {
+            animation: shang1 1000ms linear forwards;
+        }
+
+        .zhong {
+            position: relative;
+            top: 1.8rem;
+            opacity: 0;
+            transition: all 1000ms;
+
+            // animation: hua 4000ms linear forwards;
+            p {
+                font-size: .4rem;
+                text-align: center;
+                color: #0c8f8d;
+                line-height: 180%;
+                // animation: hua 4000ms linear forwards;
+            }
+        }
+
+        .bo {
+            position: relative;
+            left: 50%;
+            top: 2.5rem;
+            z-index: 999;
+            margin-left: -.32rem;
+
+            img {
+                opacity: 0;
+                width: .64rem;
+                display: block;
+                margin-top: .3rem;
+            }
+
+            .hua {
+                animation: hua 1000ms linear infinite reverse;
+            }
+
+            @keyframes hua {
+                0% {
+                    opacity: 1;
+                    // transform: translateY(-.3rem);
+                }
+
+                50% {
+                    opacity: .5;
+                    // transform: translateY(-.3rem);
+                }
+
+                100% {
+                    opacity: 0;
+                    // transform: translateY(-.3rem);
+                }
+            }
+        }
+
+        @keyframes shang1 {
+            0% {
+                transform: translateY(1rem)
+            }
+
+            100% {
+                transform: translateY(0rem)
+            }
+        }
+
+        @keyframes man1 {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .wang {
+            width: 1.86rem;
+            height: 1.18rem;
+            position: absolute;
+            background: url(../images/年度账单/导出/q.png) no-repeat;
+            background-size: 100% 100%;
+            bottom: 0.9rem;
+            z-index: 999;
+            left: 3.7rem;
+            display: none;
+            padding: 0.2rem;
+            font-size: .2rem;
+        }
+    }
+
+    .top {
+        position: relative;
+        // display: none;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        // width: 7.2rem;
+        height: 4.65rem;
+        // padding: .69rem 1.5rem 0 1.41rem;
+        margin: .3rem auto 0;
+        background: url(../images/年度账单/top.png) no-repeat center center;
+        background-size: 100%;
+
+        .diyi {
+            // display: none;
+            // position: relative;
+            p:first-child {
+                font-size: .4rem;
+                margin: 1.1rem 0 0;
+                text-align: center;
+                font-weight: 100;
+                color: white;
+
+                span {
+                    display: inline-block;
+                    width: 1.7rem !important;
+                    height: .01rem !important;
+                    background-color: white !important;
+                    position: relative;
+                    top: -0.15rem;
+                }
+            }
+
+            p:nth-child(2) {
+                font-size: 1.2rem;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+
+        .diyid {
+            display: none;
+
+            p {
+                color: white;
+                font-size: .3rem;
+                margin: 1rem 0 0 1.4rem;
+            }
+
+            p:last-child {
+                font-size: .2rem;
+                margin: .4rem 0 0 3.3rem;
+            }
+        }
+
+        .dier {
+            display: none;
+
+            p:first-child {
+                margin: .9rem 0 0 1.41rem;
+                font-size: .4rem;
+                color: white;
+
+                span {
+                    font-size: .3rem;
+                }
+            }
+
+            .trig {
+                float: left;
+
+                p:first-child {
+                    font-size: .24rem;
+                    margin: .17rem 0 0 .45rem;
+                }
+
+                p:nth-child(2) {
+                    font-size: .2rem;
+                    color: white;
+                    text-align: right;
+                    margin-top: .45rem;
+                }
+            }
+
+            .tlef {
+                width: .76rem;
+                height: .76rem;
+                float: left;
+                margin-left: 2.03rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .disan {
+            display: none;
+
+            .tlef {
+                width: .76rem;
+                height: .76rem;
+                float: left;
+                margin: .7rem 0 0 1.43rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .trig {
+                p:first-child {
+                    margin: 1rem 0 0 .2rem;
+                }
+
+                p {
+                    font-size: .3rem;
+                    color: white;
+                    float: left;
+                }
+
+                p:last-child {
+                    // width: 4.395rem;
+                    font-size: .24rem;
+                    // text-align: center;
+                    margin: .2rem 0 0 1.3rem;
+                }
+            }
+        }
+
+        .disi {
+            display: none;
+
+            p {
+                color: white;
+                font-size: .3rem;
+            }
+
+            p {
+                color: white;
+                font-size: .3rem;
+                margin: 1rem 0 0 1.4rem;
+                font-weight: 600;
+            }
+
+            p:last-child {
+                font-size: .24rem;
+                margin: .4rem 0 0 1.4rem;
+                font-weight: 300;
+            }
+        }
+
+
+    }
+
+    #que {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        border: none;
+        // top: 47%;
+        // font-size: 0.4rem;
+        // border-radius: 0.4rem;
+        // // left: 23%;
+        z-index: 999999;
+        display: none;
+        color: white;
+    }
+
+    .xian {
+        animation: sheng 1000ms linear forwards;
+    }
+
+    .shan {
+        width: 7.2rem;
+        height: 1.31rem;
+        position: absolute;
+        // top: 4.5rem;
+        bottom: 6.5rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .yun1 {
+        width: 7.2rem;
+        height: 4.8rem;
+        position: absolute;
+        // top: 4.5rem;
+        bottom: 3rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu1 {
+        width: 2rem;
+        height: .58rem;
+        position: absolute;
+        left: 2.548rem;
+        bottom: 0;
+        z-index: 100;
+
+        img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    .lu2 {
+        width: 1rem;
+        height: 4.04rem;
+        position: absolute;
+        left: 2.58rem;
+        bottom: -3.2rem;
+        z-index: 99;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .jia {
+        transform: translateY(8rem);
+    }
+
+    .shen {
+        animation: sheng 1500ms linear forwards;
+    }
+
+    @keyframes sheng {
+        0% {
+            transform: translateY(8rem)
+        }
+
+        80% {
+            transform: translateY(-.3rem);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    .lu3 {
+        width: 1rem;
+        height: 4.04rem;
+        position: absolute;
+        left: 2.1rem;
+        bottom: -2.92rem;
+        z-index: 89;
+        // animation: sheng 1000ms 400ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu4 {
+        width: 2rem;
+        height: 5.34rem;
+        position: absolute;
+        left: 1.61rem;
+        bottom: -3.37rem;
+        z-index: 79;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 800ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu5 {
+        width: 1.76rem;
+        height: 3.02rem;
+        position: absolute;
+        left: 1.383rem;
+        bottom: -.34rem;
+        z-index: 69;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 1600ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu6 {
+        width: 1.76rem;
+        height: 3.02rem;
+        position: absolute;
+        left: .1435rem;
+        bottom: .37555555rem;
+        z-index: 59;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 2400ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu7 {
+        width: 1rem;
+        height: 4.21rem;
+        position: absolute;
+        left: .85rem;
+        bottom: -.1rem;
+        z-index: 58;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 3200ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu8 {
+        width: 1rem;
+        height: 3.75rem;
+        position: absolute;
+        left: 1.35rem;
+        bottom: .7rem;
+        z-index: 57;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 3500ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .bird.wei {
+        position: absolute;
+        left: 1.45rem;
+        bottom: 4rem;
+    }
+
+    .bird.wei1 {
+        position: absolute;
+        left: 4rem;
+        bottom: 6rem;
+    }
+
+    .bird.wei2 {
+        position: absolute;
+        left: 5.45rem;
+        bottom: 3.4rem;
+    }
+
+    .lu9 {
+        width: 1.26rem;
+        height: 3.45rem;
+        position: absolute;
+        left: .86rem;
+        bottom: 1.433rem;
+        z-index: 56;
+        // transform: translateY(7rem);
+        // animation: sheng 1000ms 4000ms linear forwards;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu10 {
+        width: 1.26rem;
+        height: 3.45rem;
+        position: absolute;
+        left: 1.6rem;
+        bottom: 1.86rem;
+        z-index: 55;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu11 {
+        width: 1.26rem;
+        height: 3.45rem;
+        position: absolute;
+        left: 2.34rem;
+        bottom: 2.28555rem;
+        z-index: 54;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu11-1 {
+        width: 1.26rem;
+        height: 3.45rem;
+        position: absolute;
+        left: 3.08rem;
+        bottom: 2.71rem;
+        z-index: 53;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu12 {
+        width: 1rem;
+        height: 3.75rem;
+        position: absolute;
+        left: 3.83rem;
+        bottom: 2.7rem;
+        z-index: 52;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu13 {
+        width: 1rem;
+        height: 1.45rem;
+        position: absolute;
+        left: 4.33rem;
+        bottom: 4.71rem;
+        z-index: 54;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu14 {
+        width: 2rem;
+        height: 5.34rem;
+        position: absolute;
+        left: 3.83rem;
+        bottom: -.05rem;
+        z-index: 54;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu15 {
+        width: 1rem;
+        height: 4.04rem;
+        position: absolute;
+        left: 4.31rem;
+        bottom: .4rem;
+        z-index: 55;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu16 {
+        width: 1rem;
+        height: 4.04rem;
+        position: absolute;
+        left: 4.8rem;
+        bottom: .12rem;
+        z-index: 55;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu17 {
+        width: 1rem;
+        height: 3.75rem;
+        position: absolute;
+        left: 5.3rem;
+        bottom: .13rem;
+        z-index: 55;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu18 {
+        width: .76rem;
+        height: .8rem;
+        position: absolute;
+        left: 5.045rem;
+        bottom: 2.93rem;
+        z-index: 56;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu19 {
+        width: 1.26rem;
+        height: 3.45rem;
+        position: absolute;
+        left: 4.342rem;
+        bottom: -0.256rem;
+        z-index: 56;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu20 {
+        width: 1.26rem;
+        height: 3.02rem;
+        position: absolute;
+        left: 3.605rem;
+        bottom: .19rem;
+        z-index: 57;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu21 {
+        width: 1rem;
+        height: 5.28rem;
+        position: absolute;
+        left: 3.115rem;
+        bottom: -1.8rem;
+        z-index: 56;
+        transition: all 3900ms;
+        img {
+            width: 100%;
+        }
+    }
+    .luu{
+        animation: lu 3900ms linear forwards;
+    }
+    @keyframes lu {
+        0%{bottom: -1.8rem;}
+        10%{bottom: -2.1rem;}
+        20%{bottom: -2.1rem;}
+        100%{
+            bottom: 0rem
+        }
+    }
+    .zui{
+        // transition: all 3900ms;
+        animation: niao 3900ms linear forwards;
+    }
+    @keyframes niao {
+        0%{bottom: 3rem;}
+        10%{bottom: 2.7rem;}
+        20%{bottom: 2.7rem;}
+        100%{
+            bottom: 4.9rem;
+        }
+    }
+    .lu22 {
+        width: 1rem;
+        height: 3.46rem;
+        position: absolute;
+        left: .36rem;
+        bottom: 1.85rem;
+        z-index: 54;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .sheng {
+        animation: dd 1500ms linear forwards;
+    }
+
+    .lu23 {
+        width: .68rem;
+        height: .66rem;
+        position: absolute;
+        left: .5rem;
+        bottom: 5.6rem;
+        z-index: 62;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+            animation: bai 1000ms linear infinite alternate-reverse;
+        }
+    }
+
+    @keyframes bai {
+        0% {
+            transform: translateY(-.1rem);
+        }
+
+        50% {
+            transform: translateY(0rem);
+        }
+
+        100% {
+            transform: translateY(.1rem);
+        }
+    }
+
+    @keyframes dd {
+        0% {
+            transform: translateY(12rem)
+        }
+
+        80% {
+            transform: translateY(-.1rem);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+
+    }
+
+    .lu24 {
+        width: 2.5rem;
+        height: 5.71rem;
+        position: absolute;
+        left: 1.1rem;
+        bottom: 2rem;
+        z-index: 52;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu25 {
+        width: 1rem;
+        height: 3.46rem;
+        position: absolute;
+        left: 4.335rem;
+        bottom: 3.56rem;
+        z-index: 50;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu26 {
+        width: .82rem;
+        height: .73rem;
+        position: absolute;
+        left: 4.45rem;
+        bottom: 7.05rem;
+        z-index: 50;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+            animation: bai 1000ms linear infinite alternate-reverse;
+        }
+    }
+
+    .lu27 {
+        width: 1.63rem;
+        height: 4.61rem;
+        position: absolute;
+        left: 2.1rem;
+        bottom: .6rem;
+        z-index: 55;
+        overflow: hidden;
+
+        .xia {
+            width: 99rem;
+            animation: motian 500ms infinite steps(3);
+
+            img {
+                float: left;
+                width: 1.63rem;
+                height: 4.61rem;
+            }
+        }
+
+    }
+
+    @keyframes motian {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-4.89rem);
+        }
+    }
+
+    .lu28 {
+        width: 1rem;
+        height: 3.2rem;
+        position: absolute;
+        right: -.4rem;
+        bottom: -.4rem;
+        z-index: 55;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu29 {
+        width: 1.26rem;
+        height: 4.21rem;
+        position: absolute;
+        right: .1435rem;
+        bottom: .2rem;
+        z-index: 51;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .lu30 {
+        width: .6rem;
+        height: .84rem;
+        position: absolute;
+        right: .6rem;
+        bottom: 4.4rem;
+        z-index: 51;
+        transform: translateY(12rem);
+
+        img {
+            width: 100%;
+            animation: bai 1000ms linear infinite alternate-reverse;
+        }
+    }
+
+    .lu31 {
+        width: 1.5rem;
+        height: 6.34rem;
+        position: absolute;
+        right: .18rem;
+        bottom: 1.4rem;
+        z-index: 50;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .yun2 {
+        width: 7.2rem;
+        height: 2.4rem;
+        position: absolute;
+        bottom: 0;
+        z-index: 72;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .bird {
+        width: .7rem;
+        height: 1rem;
+        position: absolute;
+        left: 3.3rem;
+        bottom: 0;
+        z-index: 101;
+    }
+
+    .xiaqu{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0rem;
+    }
+    .xiaqu1{
+        top: 8rem;
+        transition: all 3000ms;
+    }
+    .yun3 {
+        width: 7.2rem;
+        height: 5.74rem;
+        position: absolute;
+        bottom: 0;
+        z-index: 48;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .bird.active1 {
+        animation: first 7900ms linear forwards;
+    }
+
+    .bird.active2 {
+        animation: second 4280ms linear forwards;
+    }
+
+    .bird.active3 {
+        animation: third 4700ms linear forwards;
+    }
+
+    .bird.active4 {
+        animation: fourth 3120ms linear forwards;
+    }
+
+    @keyframes first {
+        0% {
+            left: 3.3rem;
+            bottom: 0;
+        }
+
+        31.3% {
+            bottom: 1rem;
+            left: 1.8rem;
+        }
+
+        ;
+
+        46.8% {
+            // left: 2.8rem;
+            // bottom: 1.6rem;
+            left: 2.7rem;
+            bottom: 1.55rem;
+        }
+
+        79.9% {
+            left: 0.5rem;
+            bottom: 2.85rem;
+        }
+
+        100% {
+            left: 1.5rem;
+            bottom: 4rem;
+        }
+    }
+
+    @keyframes second {
+        0% {
+            left: 1.5rem;
+            bottom: 4.1rem;
+        }
+
+        13% {
+            left: 1rem;
+            bottom: 4.3rem;
+        }
+
+        100% {
+            left: 4rem;
+            bottom: 6.1rem;
+        }
+    }
+
+    @keyframes third {
+        0% {
+            left: 4rem;
+            bottom: 6.1rem;
+        }
+
+        35.3% {
+            left: 5rem;
+            bottom: 4.9rem;
+        }
+
+        60.8% {
+            left: 4rem;
+            bottom: 4.3rem;
+        }
+
+        100% {
+            left: 5.5rem;
+            bottom: 3.5rem;
+        }
+    }
+
+    @keyframes fourth {
+        0% {
+            left: 5.5rem;
+            bottom: 3.5rem;
+        }
+
+        63.4% {
+            left: 4rem;
+            bottom: 2.4rem;
+        }
+
+        100% {
+            left: 3.3rem;
+            bottom: 3.1rem;
+        }
+    }
+
+}
+
+@keyframes er {
+    0% {
+        left: 3.3rem;
+        bottom: 0;
+        // background-image: url(../images/年度账单/所有鸽子/gz1.png);
+    }
+
+    12.4% {
+        bottom: 1rem;
+        left: 1.8rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz11.png);
+    }
+
+    18.6% {
+        left: 2.7rem;
+        bottom: 1.6rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz1.png);
+    }
+
+    31.6% {
+        left: 0.6rem;
+        bottom: 2.9rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz11.png);
+    }
+
+    39.5% {
+        left: 1.5rem;
+        bottom: 4.1rem;
+        //     background-image: url(../images/年度账单/所有鸽子/gz1.png);
+    }
+
+    42.3% {
+        left: 1rem;
+        bottom: 4.3rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz11.png);
+    }
+
+    60.8% {
+        left: 4rem;
+        bottom: 6.1rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz21.png);
+    }
+
+    69.2% {
+        left: 5rem;
+        bottom: 4.9rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz31.png);
+    }
+
+    75.2% {
+        left: 4rem;
+        bottom: 4.3rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz21.png);
+    }
+
+    84.3% {
+        left: 5.5rem;
+        bottom: 3.5rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz31.png);
+    }
+
+    94.2% {
+        left: 4rem;
+        bottom: 2.4rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz1.png);
+    }
+
+    100% {
+        left: 3.3rem;
+        bottom: 3.1rem;
+        // background-image: url(../images/年度账单/所有鸽子/gz1.png);
+    }
+
+
+}
+
+.guang,
+.guang1,
+.guang2,
+.guang3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 8px solid white;
+    border-radius: 50%;
+    margin: 100px auto;
+    display: none;
+    animation: quan 1000ms linear infinite reverse;
+    z-index: 999;
+}
+
+.guang {
+    bottom: 2.2rem;
+    left: 1.73rem;
+}
+
+.guang1 {
+    bottom: 4.2rem;
+    left: 4.2rem;
+}
+
+.guang2 {
+    bottom: 1.55rem;
+    left: 5.65rem;
+}
+
+.guang3 {
+    bottom: 1.15rem;
+    left: 3.45rem;
+}
+
+@keyframes quan {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    33.3% {
+        transform: scale(2);
+        opacity: .5;
+        border: 4px solid white;
+    }
+
+    66.6% {
+        transform: scale(3);
+        opacity: .2;
+        border: 2px solid white;
+    }
+
+    100% {
+        transform: scale(.6);
+        opacity: 1;
+        ;
+    }
+}
+
+// @keyframes zong {
+//     0% {
+//         left: 3.3rem;
+//         bottom: 0;
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     1%{
+//         background-image: url(../images/年度账单/所有鸽子/gz2.png);
+//     }
+//     2%{
+//         background-image: url(../images/年度账单/所有鸽子/gz3.png);
+//     }
+//     3%{
+//         background-image: url(../images/年度账单/所有鸽子/gz4.png);
+//     }
+//     4%{
+//         background-image: url(../images/年度账单/所有鸽子/gz5.png);
+//     }
+//     5%{
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     6%{
+//         background-image: url(../images/年度账单/所有鸽子/gz2.png);
+//     }
+//     7%{
+//         background-image: url(../images/年度账单/所有鸽子/gz3.png);
+//     }
+//     8%{
+//         background-image: url(../images/年度账单/所有鸽子/gz4.png);
+//     }
+//     9%{
+//         background-image: url(../images/年度账单/所有鸽子/gz5.png);
+//     }
+//     12.4% {
+//         bottom: 1rem;
+//         left: 1.8rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz11.png);
+//     }
+//     12%{
+//         background-image: url(../images/年度账单/所有鸽子/gz12.png);
+//     }
+//     13%{
+//         background-image: url(../images/年度账单/所有鸽子/gz13.png);
+//     }
+//     14%{
+//         background-image: url(../images/年度账单/所有鸽子/gz14.png);
+//     }
+//     15%{
+//         background-image: url(../images/年度账单/所有鸽子/gz15.png);
+//     }
+//     18% {
+//         left: 2.7rem;
+//         bottom: 1.6rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     18%{
+//         background-image: url(../images/年度账单/所有鸽子/gz2.png);
+//     }
+//     20%{
+//         background-image: url(../images/年度账单/所有鸽子/gz3.png);
+//     }
+//     22%{
+//         background-image: url(../images/年度账单/所有鸽子/gz4.png);
+//     }
+//     24%{
+//         background-image: url(../images/年度账单/所有鸽子/gz5.png);
+//     }
+//     26%{
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     31% {
+//         left: 0.6rem;
+//         bottom: 2.9rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz11.png);
+//     }
+//     29%{
+//         background-image: url(../images/年度账单/所有鸽子/gz12.png);
+//     }
+//     31%{
+//         background-image: url(../images/年度账单/所有鸽子/gz13.png);
+//     }
+//     33%{
+//         background-image: url(../images/年度账单/所有鸽子/gz14.png);
+//     }
+//     35%{
+//         background-image: url(../images/年度账单/所有鸽子/gz15.png);
+//     }
+//     38% {
+//         left: 1.5rem;
+//         bottom: 4.1rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     37%{
+//         background-image: url(../images/年度账单/所有鸽子/gz2.png);
+//     }
+//     38%{
+//         background-image: url(../images/年度账单/所有鸽子/gz3.png);
+//     }
+//     39%{
+//         background-image: url(../images/年度账单/所有鸽子/gz4.png);
+//     }
+//     40% {
+//         left: 1rem;
+//         bottom: 4.3rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz11.png);
+//     }
+//     42%{
+//         background-image: url(../images/年度账单/所有鸽子/gz12.png);
+//     }
+//     44%{
+//         background-image: url(../images/年度账单/所有鸽子/gz13.png);
+//     }
+//     46%{
+//         background-image: url(../images/年度账单/所有鸽子/gz14.png);
+//     }
+//     48%{
+//         background-image: url(../images/年度账单/所有鸽子/gz15.png);
+//     }
+//     50%{
+//         background-image: url(../images/年度账单/所有鸽子/gz11.png);
+//     }
+//     52%{
+//         background-image: url(../images/年度账单/所有鸽子/gz12.png);
+//     }
+//     54%{
+//         background-image: url(../images/年度账单/所有鸽子/gz13.png);
+//     }
+//     56%{
+//         background-image: url(../images/年度账单/所有鸽子/gz14.png);
+//     }
+//     58%{
+//         background-image: url(../images/年度账单/所有鸽子/gz15.png);
+//     }
+//     58.6% {
+//         left: 4rem;
+//         bottom: 6.1rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz21.png);
+//     }
+//     61%{
+//         background-image: url(../images/年度账单/所有鸽子/gz22.png);
+//     }
+//     63%{
+//         background-image: url(../images/年度账单/所有鸽子/gz23.png);
+//     }
+//     65%{
+//         background-image: url(../images/年度账单/所有鸽子/gz24.png);
+//     }
+//     66%{
+//         background-image: url(../images/年度账单/所有鸽子/gz25.png);
+//     }
+//     66.6% {
+//         left: 5rem;
+//         bottom: 4.9rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz31.png);
+//     }
+//     68%{
+//         background-image: url(../images/年度账单/所有鸽子/gz32.png);
+//     }
+//     69%{
+//         background-image: url(../images/年度账单/所有鸽子/gz33.png);
+//     }
+//     70%{
+//         background-image: url(../images/年度账单/所有鸽子/gz34.png);
+//     }
+//     71.5%{
+//         background-image: url(../images/年度账单/所有鸽子/gz35.png);
+//     }
+//     72.6% {
+//         left: 4rem;
+//         bottom: 4.3rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz21.png);
+//     }
+//     // 78%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz22.png);
+//     // }
+//     // 80%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz23.png);
+//     // }
+//     // 82%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz24.png);
+//     // }
+//     // 84%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz25.png);
+//     // }
+
+//     81.6% {
+//         left: 5.5rem;
+//         bottom: 3.5rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz31.png);
+//     }
+//     // 88%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz32.png);
+//     // }
+//     // 90%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz33.png);
+//     // }
+//     // 92%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz34.png);
+//     // }
+//     // 94%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz35.png);
+//     // }
+
+//     92% {
+//         left: 4rem;
+//         bottom: 2.4rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+//     // 97%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz2.png);
+//     // }
+//     // 98%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz3.png);
+//     // }
+//     // 98.5%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz4.png);
+//     // }
+//     // 99%{
+//     //     background-image: url(../images/年度账单/所有鸽子/gz5.png);
+//     // }
+
+//     100% {
+//         left: 3.3rem;
+//         bottom: 3.1rem;
+//         background-image: url(../images/年度账单/所有鸽子/gz1.png);
+//     }
+// }
